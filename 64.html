@@ -89,6 +89,15 @@
         .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
         .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
         .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
+        .translation-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background: #f9f9f9;
+            padding: 6px;
+            border-radius: 4px;
+        }
         .close-btn {
             background: #007aff; color: white; border: none;
             padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
@@ -102,8 +111,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Begründen – to justify, to give a reason (begründen – begründete – hat begründet)</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Begründen – to justify, to give a reason (begründen – begründete – hat begründet)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('begründen – begründete – hat begründet')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('begründen – begründete – hat begründet', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Begründen – to justify, to give a reason (begründen – begründete – hat begründet)')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -114,8 +123,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich begründe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meine</span> Entscheidung.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich begründe meine Entscheidung.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich begründe meine Entscheidung.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich begründe meine Entscheidung.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich begründe meine Entscheidung.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -126,8 +135,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er begründet <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">seine</span> Entscheidung mit <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">den</span> hohen Kosten.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Er begründet seine Entscheidung mit den hohen Kosten.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Er begründet seine Entscheidung mit den hohen Kosten.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Er begründet seine Entscheidung mit den hohen Kosten.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Er begründet seine Entscheidung mit den hohen Kosten.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -136,10 +145,10 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Sie begründet <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ihre</span> Meinung durch gute Argumente.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Sie begründet <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ihre</span> Meinung <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">durch</span> gute Argumente.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Sie begründet ihre Meinung durch gute Argumente.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Sie begründet ihre Meinung durch gute Argumente.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Sie begründet ihre Meinung durch gute Argumente.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Sie begründet ihre Meinung durch gute Argumente.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -150,16 +159,16 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meine</span> Entscheidung begründet.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe meine Entscheidung begründet.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich habe meine Entscheidung begründet.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe meine Entscheidung begründet.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe meine Entscheidung begründet.')" title="Translation">文A</button>
                             </div>
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Besichtigen – to visit, to see (a place or attraction) (besichtigen – besichtigte – hat besichtigt)</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Besichtigen – to visit, to see (a place or attraction) (besichtigen – besichtigte – hat besichtigt)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('a place or attraction besichtigen – besichtigte – hat besichtigt')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('a place or attraction besichtigen – besichtigte – hat besichtigt', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Besichtigen – to visit, to see (a place or attraction) (besichtigen – besichtigte – hat besichtigt)')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -170,8 +179,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir besichtigen <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">das</span> Museum.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Wir besichtigen das Museum.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Wir besichtigen das Museum.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Wir besichtigen das Museum.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Wir besichtigen das Museum.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -182,8 +191,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich besichtige <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">die</span> Stadt mit <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meinen</span> Freunden.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich besichtige die Stadt mit meinen Freunden.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich besichtige die Stadt mit meinen Freunden.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich besichtige die Stadt mit meinen Freunden.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich besichtige die Stadt mit meinen Freunden.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -192,10 +201,10 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir besichtigen <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">das</span> Schloss am Samstag.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir besichtigen <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">das</span> Schloss <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">am</span> Samstag.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Wir besichtigen das Schloss am Samstag.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Wir besichtigen das Schloss am Samstag.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Wir besichtigen das Schloss am Samstag.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Wir besichtigen das Schloss am Samstag.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -206,16 +215,16 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">das</span> Museum besichtigt.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe das Museum besichtigt.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich habe das Museum besichtigt.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe das Museum besichtigt.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe das Museum besichtigt.')" title="Translation">文A</button>
                             </div>
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Bestellen – to order, to request (bestellen – bestellte – hat bestellt)</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Bestellen – to order, to request (bestellen – bestellte – hat bestellt)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('bestellen – bestellte – hat bestellt')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('bestellen – bestellte – hat bestellt', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Bestellen – to order, to request (bestellen – bestellte – hat bestellt)')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -226,8 +235,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bestelle <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">eine</span> Pizza.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich bestelle eine Pizza.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich bestelle eine Pizza.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich bestelle eine Pizza.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich bestelle eine Pizza.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -238,8 +247,8 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bestelle <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">das</span> Buch beim Händler.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich bestelle das Buch beim Händler.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich bestelle das Buch beim Händler.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich bestelle das Buch beim Händler.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich bestelle das Buch beim Händler.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -248,10 +257,10 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bestelle <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">einen</span> Kaffee für <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meinen</span> Freund.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bestelle <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">einen</span> Kaffee <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">für</span> <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meinen</span> Freund.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich bestelle einen Kaffee für meinen Freund.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich bestelle einen Kaffee für meinen Freund.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich bestelle einen Kaffee für meinen Freund.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich bestelle einen Kaffee für meinen Freund.')" title="Translation">文A</button>
                             </div>
                         </div>
 
@@ -262,33 +271,37 @@
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">eine</span> Pizza bestellt.</span>
                             <div class="btn-group">
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe eine Pizza bestellt.')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ich habe eine Pizza bestellt.')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe eine Pizza bestellt.', 'de-DE')" title="Listen (German)">🔊</button>
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe eine Pizza bestellt.')" title="Translation">文A</button>
                             </div>
                         </div>
     </div>
 
     <div id="translateModal" class="modal-overlay">
         <div class="modal-box">
-            <h3>🌐 Translation</h3>
+            <h3>文A Translation</h3>
             <div class="modal-section">
                 <strong>German (Original):</strong>
-                <span id="originalText" style="display: block; background: #f9f9f9; padding: 4px; border-radius: 4px;"></span>
+                <span id="originalText" style="display: block; background: #f9f9f9; padding: 6px; border-radius: 4px;"></span>
             </div>
             <hr style="border: none; border-top: 1px solid #eee;">
             <div class="modal-section">
                 <strong>English Translation:</strong>
-                <span id="englishText" style="display: block;">Translating...</span>
+                <div class="translation-row">
+                    <span id="englishText">Translating...</span>
+                    <button id="speakEnBtn" class="action-btn" style="display:none; padding: 3px 6px;" title="Listen (English)">🔊</button>
+                </div>
             </div>
             <button class="close-btn" onclick="closeModal()">Close</button>
         </div>
     </div>
 
     <script>
-        function speakText(text) {
+        function speakText(text, lang = 'de-DE') {
+            if (!text) return;
             window.speechSynthesis.cancel();
             const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'de-DE';
+            utterance.lang = lang;
             utterance.rate = 0.9;
             window.speechSynthesis.speak(utterance);
         }
@@ -296,12 +309,21 @@
         async function translateFree(text) {
             document.getElementById('originalText').innerText = text;
             document.getElementById('englishText').innerText = 'Translating...';
+            const speakEnBtn = document.getElementById('speakEnBtn');
+            speakEnBtn.style.display = 'none';
             document.getElementById('translateModal').style.display = 'flex';
 
             try {
                 const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
                 const dataEn = await resEn.json();
-                document.getElementById('englishText').innerText = dataEn[0].map(item => item[0]).join('');
+                const translatedText = dataEn[0].map(item => item[0]).join('');
+                
+                document.getElementById('englishText').innerText = translatedText;
+                
+                // إظهار زر النطق مع تكييفه لنطق النص الإنجليزي
+                speakEnBtn.style.display = 'inline-block';
+                speakEnBtn.onclick = () => speakText(translatedText, 'en-US');
+
             } catch (err) {
                 document.getElementById('englishText').innerText = 'Error fetching translation';
             }
