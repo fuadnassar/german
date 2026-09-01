@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Page 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة 12</title>
     <style>
         body {
             margin: 0;
@@ -10,6 +11,7 @@
             background-color: #e0e0e0;
             display: flex;
             justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         .page-wrapper {
             position: relative;
@@ -18,69 +20,274 @@
             background-color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
+        }
+        .line-container .btn-group {
+            display: inline-flex;
+            gap: 2px;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+            margin-left: 6px;
+        }
+        .line-container:hover .btn-group {
+            opacity: 1;
+        }
+        .action-btn {
+            border: none;
+            background: #f0f0f0;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            padding: 1px 4px;
+            line-height: 1;
+        }
+        .action-btn:hover {
+            background: #007aff;
+            color: white;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            direction: ltr;
+        }
+        .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
+        .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
+        .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
+        .close-btn {
+            background: #007aff; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
         }
     </style>
 </head>
 <body>
+
     <div class="page-wrapper">
-        <span style="position: absolute; left: 70.80pt; top: 71.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 85.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Leben – to live </span>
-        <span style="position: absolute; left: 70.80pt; top: 98.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 112.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +leben + in + Dativ (Ort) </span>
-        <span style="position: absolute; left: 70.80pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lebe in Deutschland.</span>
-        <span style="position: absolute; left: 194.15pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 140.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 153.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +leben + bei + Dativ (Person/Institution) </span>
-        <span style="position: absolute; left: 70.80pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lebe bei meinen Eltern.</span>
-        <span style="position: absolute; left: 208.45pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 181.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 195.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +leben + mit + Dativ (Person) </span>
-        <span style="position: absolute; left: 70.80pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lebe mit meiner Familie.</span>
-        <span style="position: absolute; left: 215.09pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 223.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 236.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +leben + von + Dativ (Einkommen/Lebensunterhalt) </span>
-        <span style="position: absolute; left: 70.80pt; top: 250.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Er hat von seinem Gehalt gelebt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 264.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 278.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 291.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 305.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Lernen – to learn, to study </span>
-        <span style="position: absolute; left: 70.80pt; top: 319.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 333.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lernen + Akkusativ (Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lerne Deutsch.</span>
-        <span style="position: absolute; left: 163.79pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 361.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 374.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lernen + zu + Infinitiv </span>
-        <span style="position: absolute; left: 70.80pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lerne, selbstständig zu arbeiten.</span>
-        <span style="position: absolute; left: 252.13pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 402.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 416.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lernen + bei + Dativ (Person/Institution) </span>
-        <span style="position: absolute; left: 70.80pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lerne bei einem erfahrenen Lehrer.</span>
-        <span style="position: absolute; left: 270.08pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 443.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 457.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lernen + für + Akkusativ (Prüfung/Ziel) </span>
-        <span style="position: absolute; left: 70.80pt; top: 471.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe für die Prüfung gelernt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 485.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 499.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 512.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 526.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Lesen – to read (lesen – las – hat gelesen) </span>
-        <span style="position: absolute; left: 70.80pt; top: 540.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 554.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lesen + Akkusativ (Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lese ein Buch.</span>
-        <span style="position: absolute; left: 160.14pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 581.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 595.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lesen + über + Akkusativ (Thema) </span>
-        <span style="position: absolute; left: 70.80pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lese ein Buch über Geschichte.</span>
-        <span style="position: absolute; left: 246.12pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 623.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 637.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +lesen + von + Dativ (Quelle/Autor) </span>
-        <span style="position: absolute; left: 70.80pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lese einen Artikel von einem bekannten Autor.</span>
-        <span style="position: absolute; left: 328.13pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 664.43pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 678.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +vor + Dativ lesen </span>
-        <span style="position: absolute; left: 70.80pt; top: 692.03pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Die Lehrerin hat den Kindern eine Geschichte vorgelesen. </span>
-        <span style="position: absolute; left: 70.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
-        <span style="position: absolute; left: 214.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
+        
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Leben – to live</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Leben – to live')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Leben – to live')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +leben + in + Dativ (Ort)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lebe in Deutschland.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lebe in Deutschland.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lebe in Deutschland.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +leben + bei + Dativ (Person/Institution)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lebe bei meinen Eltern.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lebe bei meinen Eltern.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lebe bei meinen Eltern.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +leben + mit + Dativ (Person)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lebe mit meiner Familie.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lebe mit meiner Familie.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lebe mit meiner Familie.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +leben + von + Dativ (Einkommen/Lebensunterhalt)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er hat von seinem Gehalt gelebt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Er hat von seinem Gehalt gelebt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Er hat von seinem Gehalt gelebt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Lernen – to learn, to study</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Lernen – to learn, to study')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Lernen – to learn, to study')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lernen + Akkusativ (Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lerne Deutsch.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lerne Deutsch.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lerne Deutsch.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lernen + zu + Infinitiv</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lerne, selbstständig zu arbeiten.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lerne, selbstständig zu arbeiten.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lerne, selbstständig zu arbeiten.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lernen + bei + Dativ (Person/Institution)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lerne bei einem erfahrenen Lehrer.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lerne bei einem erfahrenen Lehrer.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lerne bei einem erfahrenen Lehrer.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 457.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lernen + für + Akkusativ (Prüfung/Ziel)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe für die Prüfung gelernt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe für die Prüfung gelernt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe für die Prüfung gelernt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Lesen – to read (lesen – las – hat gelesen)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Lesen – to read (lesen – las – hat gelesen)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Lesen – to read (lesen – las – hat gelesen)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lesen + Akkusativ (Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese ein Buch.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lese ein Buch.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lese ein Buch.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lesen + über + Akkusativ (Thema)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese ein Buch über Geschichte.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lese ein Buch über Geschichte.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lese ein Buch über Geschichte.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +lesen + von + Dativ (Quelle/Autor)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese einen Artikel von einem bekannten Autor.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lese einen Artikel von einem bekannten Autor.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lese einen Artikel von einem bekannten Autor.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 678.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +vor + Dativ lesen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Lehrerin hat den Kindern eine Geschichte vorgelesen.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Die Lehrerin hat den Kindern eine Geschichte vorgelesen.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Die Lehrerin hat den Kindern eine Geschichte vorgelesen.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
     </div>
+
+    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
+    <div id="translateModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>🌐 Translation</h3>
+            <div class="modal-section">
+                <strong>German (Original):</strong>
+                <span id="originalText" style="display: block; background: #f9f9f9; padding: 4px; border-radius: 4px;"></span>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee;">
+            <div class="modal-section">
+                <strong>English Translation:</strong>
+                <span id="englishText" style="display: block;">Translating...</span>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function speakText(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'de-DE';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        async function translateFree(text) {
+            document.getElementById('originalText').innerText = text;
+            document.getElementById('englishText').innerText = 'Translating...';
+            document.getElementById('translateModal').style.display = 'flex';
+
+            try {
+                const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const dataEn = await resEn.json();
+                document.getElementById('englishText').innerText = dataEn[0].map(item => item[0]).join('');
+            } catch (err) {
+                document.getElementById('englishText').innerText = 'Error fetching translation';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('translateModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

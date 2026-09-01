@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Page 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة 5</title>
     <style>
         body {
             margin: 0;
@@ -10,6 +11,7 @@
             background-color: #e0e0e0;
             display: flex;
             justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         .page-wrapper {
             position: relative;
@@ -18,65 +20,262 @@
             background-color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
+        }
+        .line-container .btn-group {
+            display: inline-flex;
+            gap: 2px;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+            margin-left: 6px;
+        }
+        .line-container:hover .btn-group {
+            opacity: 1;
+        }
+        .action-btn {
+            border: none;
+            background: #f0f0f0;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            padding: 1px 4px;
+            line-height: 1;
+        }
+        .action-btn:hover {
+            background: #007aff;
+            color: white;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            direction: ltr;
+        }
+        .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
+        .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
+        .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
+        .close-btn {
+            background: #007aff; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
         }
     </style>
 </head>
 <body>
+
     <div class="page-wrapper">
-        <span style="position: absolute; left: 70.80pt; top: 71.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 85.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Erklären – to explain </span>
-        <span style="position: absolute; left: 70.80pt; top: 98.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 112.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas erklären + Akkusativ (Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich erkläre die Grammatik.</span>
-        <span style="position: absolute; left: 212.77pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 140.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 153.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +jemandem etwas erklären + Dativ + Akkusativ </span>
-        <span style="position: absolute; left: 70.80pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich erkläre dem Schüler die Aufgabe.</span>
-        <span style="position: absolute; left: 262.78pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 181.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 195.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +jemandem + Akkusativ erklären </span>
-        <span style="position: absolute; left: 70.80pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Kannst du mir das erklären?</span>
-        <span style="position: absolute; left: 219.48pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 223.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 236.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas anhand + Genitiv erklären </span>
-        <span style="position: absolute; left: 70.80pt; top: 250.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Der Lehrer hat die Regel anhand eines Beispiels erklärt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 264.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 278.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 291.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 305.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Ersetzen – to replace (ersetzen – ersetzte – hat ersetzt) </span>
-        <span style="position: absolute; left: 70.80pt; top: 319.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 333.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +jemanden/etwas ersetzen + Akkusativ (Person/Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich ersetze den alten Mitarbeiter.</span>
-        <span style="position: absolute; left: 241.74pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 361.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 374.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas durch + Akkusativ ersetzen </span>
-        <span style="position: absolute; left: 70.80pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Wir ersetzen das alte System durch ein neues.</span>
-        <span style="position: absolute; left: 304.77pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 402.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 416.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas gegen + Akkusativ ersetzen </span>
-        <span style="position: absolute; left: 70.80pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Er hat das alte Handy gegen ein neues ersetzt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 443.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 457.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 471.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 485.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Erzählen – to tell, to narrate (erzählen – erzählte – hat erzählt) </span>
-        <span style="position: absolute; left: 70.80pt; top: 499.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 512.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +jemandem erzählen + Dativ (Person) </span>
-        <span style="position: absolute; left: 70.80pt; top: 526.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich erzähle dir eine Geschichte.</span>
-        <span style="position: absolute; left: 231.76pt; top: 526.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 540.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 554.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas erzählen + Akkusativ (Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Er erzählt eine interessante Geschichte.</span>
-        <span style="position: absolute; left: 273.08pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 581.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 595.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +jemandem etwas über + Akkusativ erzählen </span>
-        <span style="position: absolute; left: 70.80pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich erzähle meinem Freund über meine Reise.</span>
-        <span style="position: absolute; left: 306.42pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 623.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 637.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +von + Dativ erzählen </span>
-        <span style="position: absolute; left: 70.80pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Sie hat von ihrer Kindheit erzählt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 664.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
-        <span style="position: absolute; left: 214.80pt; top: 664.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
+        
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Erklären – to explain</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Erklären – to explain')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Erklären – to explain')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas erklären + Akkusativ (Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erkläre die Grammatik.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich erkläre die Grammatik.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich erkläre die Grammatik.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +jemandem etwas erklären + Dativ + Akkusativ</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erkläre dem Schüler die Aufgabe.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich erkläre dem Schüler die Aufgabe.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich erkläre dem Schüler die Aufgabe.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +jemandem + Akkusativ erklären</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Kannst du mir das erklären?</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Kannst du mir das erklären?')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Kannst du mir das erklären?')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas anhand + Genitiv erklären</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Lehrer hat die Regel anhand eines Beispiels erklärt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Der Lehrer hat die Regel anhand eines Beispiels erklärt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Der Lehrer hat die Regel anhand eines Beispiels erklärt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Ersetzen – to replace (ersetzen – ersetzte – hat ersetzt)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ersetzen – to replace (ersetzen – ersetzte – hat ersetzt)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ersetzen – to replace (ersetzen – ersetzte – hat ersetzt)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +jemanden/etwas ersetzen + Akkusativ (Person/Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich ersetze den alten Mitarbeiter.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich ersetze den alten Mitarbeiter.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich ersetze den alten Mitarbeiter.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas durch + Akkusativ ersetzen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir ersetzen das alte System durch ein neues.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Wir ersetzen das alte System durch ein neues.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Wir ersetzen das alte System durch ein neues.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas gegen + Akkusativ ersetzen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er hat das alte Handy gegen ein neues ersetzt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Er hat das alte Handy gegen ein neues ersetzt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Er hat das alte Handy gegen ein neues ersetzt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 485.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Erzählen – to tell, to narrate (erzählen – erzählte – hat erzählt)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Erzählen – to tell, to narrate (erzählen – erzählte – hat erzählt)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Erzählen – to tell, to narrate (erzählen – erzählte – hat erzählt)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 512.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +jemandem erzählen + Dativ (Person)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erzähle dir eine Geschichte.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich erzähle dir eine Geschichte.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich erzähle dir eine Geschichte.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas erzählen + Akkusativ (Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er erzählt eine interessante Geschichte.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Er erzählt eine interessante Geschichte.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Er erzählt eine interessante Geschichte.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +jemandem etwas über + Akkusativ erzählen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erzähle meinem Freund über meine Reise.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich erzähle meinem Freund über meine Reise.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich erzähle meinem Freund über meine Reise.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +von + Dativ erzählen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Sie hat von ihrer Kindheit erzählt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Sie hat von ihrer Kindheit erzählt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Sie hat von ihrer Kindheit erzählt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
     </div>
+
+    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
+    <div id="translateModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>🌐 Translation</h3>
+            <div class="modal-section">
+                <strong>German (Original):</strong>
+                <span id="originalText" style="display: block; background: #f9f9f9; padding: 4px; border-radius: 4px;"></span>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee;">
+            <div class="modal-section">
+                <strong>English Translation:</strong>
+                <span id="englishText" style="display: block;">Translating...</span>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function speakText(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'de-DE';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        async function translateFree(text) {
+            document.getElementById('originalText').innerText = text;
+            document.getElementById('englishText').innerText = 'Translating...';
+            document.getElementById('translateModal').style.display = 'flex';
+
+            try {
+                const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const dataEn = await resEn.json();
+                document.getElementById('englishText').innerText = dataEn[0].map(item => item[0]).join('');
+            } catch (err) {
+                document.getElementById('englishText').innerText = 'Error fetching translation';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('translateModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

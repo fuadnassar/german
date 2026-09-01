@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Page 55</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة 55</title>
     <style>
         body {
             margin: 0;
@@ -10,6 +11,7 @@
             background-color: #e0e0e0;
             display: flex;
             justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         .page-wrapper {
             position: relative;
@@ -18,69 +20,274 @@
             background-color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
+        }
+        .line-container .btn-group {
+            display: inline-flex;
+            gap: 2px;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+            margin-left: 6px;
+        }
+        .line-container:hover .btn-group {
+            opacity: 1;
+        }
+        .action-btn {
+            border: none;
+            background: #f0f0f0;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            padding: 1px 4px;
+            line-height: 1;
+        }
+        .action-btn:hover {
+            background: #007aff;
+            color: white;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            direction: ltr;
+        }
+        .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
+        .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
+        .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
+        .close-btn {
+            background: #007aff; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
         }
     </style>
 </head>
 <body>
+
     <div class="page-wrapper">
-        <span style="position: absolute; left: 70.80pt; top: 71.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 85.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen) </span>
-        <span style="position: absolute; left: 70.80pt; top: 98.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 112.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas ablesen + Akkusativ (Zahl/Anzeige) </span>
-        <span style="position: absolute; left: 70.80pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lese die Uhrzeit ab.</span>
-        <span style="position: absolute; left: 187.78pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 140.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 153.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas von + Dativ ablesen (Anzeige/Text) </span>
-        <span style="position: absolute; left: 70.80pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lese die Zahl vom Bildschirm ab.</span>
-        <span style="position: absolute; left: 257.81pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 181.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 195.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas an + Dativ ablesen (Gerät) </span>
-        <span style="position: absolute; left: 70.80pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich lese die Temperatur am Thermometer ab.</span>
-        <span style="position: absolute; left: 305.08pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 223.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 236.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + Akkusativ + abgelesen </span>
-        <span style="position: absolute; left: 70.80pt; top: 250.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe die Temperatur am Thermometer abgelesen. </span>
-        <span style="position: absolute; left: 70.80pt; top: 264.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 278.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 291.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 305.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet) </span>
-        <span style="position: absolute; left: 70.80pt; top: 319.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 333.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +sich abmelden + bei + Dativ </span>
-        <span style="position: absolute; left: 70.80pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich melde mich bei der Schule ab.</span>
-        <span style="position: absolute; left: 243.80pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 361.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 374.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +sich abmelden + von + Dativ </span>
-        <span style="position: absolute; left: 70.80pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich melde mich vom Deutschkurs ab.</span>
-        <span style="position: absolute; left: 260.80pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 402.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 416.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +sich abmelden + aus + Dativ (Account/System) </span>
-        <span style="position: absolute; left: 70.80pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich melde mich aus dem Konto ab.</span>
-        <span style="position: absolute; left: 248.47pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 443.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 457.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + sich + abgemeldet </span>
-        <span style="position: absolute; left: 70.80pt; top: 471.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe mich vom Deutschkurs abgemeldet. </span>
-        <span style="position: absolute; left: 70.80pt; top: 485.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 499.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 512.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 526.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen) </span>
-        <span style="position: absolute; left: 70.80pt; top: 540.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 554.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas abschließen + Akkusativ (Tür/Vertrag) </span>
-        <span style="position: absolute; left: 70.80pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich schließe die Tür ab.</span>
-        <span style="position: absolute; left: 191.15pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 581.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 595.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas mit + Dativ abschließen (Vertrag) </span>
-        <span style="position: absolute; left: 70.80pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich schließe einen Vertrag mit der Firma ab.</span>
-        <span style="position: absolute; left: 299.42pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 623.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 637.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas erfolgreich abschließen + Akkusativ (Ausbildung/Projekt) </span>
-        <span style="position: absolute; left: 70.80pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Sie schließt ihre Ausbildung erfolgreich ab.</span>
-        <span style="position: absolute; left: 292.14pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 664.43pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 678.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + Akkusativ + abgeschlossen </span>
-        <span style="position: absolute; left: 70.80pt; top: 692.03pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe den Vertrag abgeschlossen. </span>
-        <span style="position: absolute; left: 70.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
-        <span style="position: absolute; left: 214.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
+        
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas ablesen + Akkusativ (Zahl/Anzeige)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese die Uhrzeit ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lese die Uhrzeit ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lese die Uhrzeit ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas von + Dativ ablesen (Anzeige/Text)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese die Zahl vom Bildschirm ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lese die Zahl vom Bildschirm ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lese die Zahl vom Bildschirm ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas an + Dativ ablesen (Gerät)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese die Temperatur am Thermometer ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich lese die Temperatur am Thermometer ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich lese die Temperatur am Thermometer ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + abgelesen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe die Temperatur am Thermometer abgelesen.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe die Temperatur am Thermometer abgelesen.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe die Temperatur am Thermometer abgelesen.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sich abmelden + bei + Dativ</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich bei der Schule ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich melde mich bei der Schule ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich melde mich bei der Schule ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sich abmelden + von + Dativ</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich vom Deutschkurs ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich melde mich vom Deutschkurs ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich melde mich vom Deutschkurs ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sich abmelden + aus + Dativ (Account/System)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich aus dem Konto ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich melde mich aus dem Konto ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich melde mich aus dem Konto ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 457.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + sich + abgemeldet</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe mich vom Deutschkurs abgemeldet.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe mich vom Deutschkurs abgemeldet.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe mich vom Deutschkurs abgemeldet.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas abschließen + Akkusativ (Tür/Vertrag)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schließe die Tür ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich schließe die Tür ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich schließe die Tür ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas mit + Dativ abschließen (Vertrag)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schließe einen Vertrag mit der Firma ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich schließe einen Vertrag mit der Firma ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich schließe einen Vertrag mit der Firma ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas erfolgreich abschließen + Akkusativ (Ausbildung/Projekt)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Sie schließt ihre Ausbildung erfolgreich ab.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Sie schließt ihre Ausbildung erfolgreich ab.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Sie schließt ihre Ausbildung erfolgreich ab.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 678.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + abgeschlossen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe den Vertrag abgeschlossen.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe den Vertrag abgeschlossen.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe den Vertrag abgeschlossen.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
     </div>
+
+    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
+    <div id="translateModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>🌐 Translation</h3>
+            <div class="modal-section">
+                <strong>German (Original):</strong>
+                <span id="originalText" style="display: block; background: #f9f9f9; padding: 4px; border-radius: 4px;"></span>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee;">
+            <div class="modal-section">
+                <strong>English Translation:</strong>
+                <span id="englishText" style="display: block;">Translating...</span>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function speakText(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'de-DE';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        async function translateFree(text) {
+            document.getElementById('originalText').innerText = text;
+            document.getElementById('englishText').innerText = 'Translating...';
+            document.getElementById('translateModal').style.display = 'flex';
+
+            try {
+                const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const dataEn = await resEn.json();
+                document.getElementById('englishText').innerText = dataEn[0].map(item => item[0]).join('');
+            } catch (err) {
+                document.getElementById('englishText').innerText = 'Error fetching translation';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('translateModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

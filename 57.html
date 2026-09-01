@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Page 57</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة 57</title>
     <style>
         body {
             margin: 0;
@@ -10,6 +11,7 @@
             background-color: #e0e0e0;
             display: flex;
             justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         .page-wrapper {
             position: relative;
@@ -18,69 +20,274 @@
             background-color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
+        }
+        .line-container .btn-group {
+            display: inline-flex;
+            gap: 2px;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+            margin-left: 6px;
+        }
+        .line-container:hover .btn-group {
+            opacity: 1;
+        }
+        .action-btn {
+            border: none;
+            background: #f0f0f0;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            padding: 1px 4px;
+            line-height: 1;
+        }
+        .action-btn:hover {
+            background: #007aff;
+            color: white;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            direction: ltr;
+        }
+        .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
+        .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
+        .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
+        .close-btn {
+            background: #007aff; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
         }
     </style>
 </head>
 <body>
+
     <div class="page-wrapper">
-        <span style="position: absolute; left: 70.80pt; top: 71.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 85.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Anklicken – to click on </span>
-        <span style="position: absolute; left: 70.80pt; top: 98.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 112.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas anklicken + Akkusativ (Link/Schaltfläche) </span>
-        <span style="position: absolute; left: 70.80pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich klicke den Link an.</span>
-        <span style="position: absolute; left: 189.17pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 140.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 153.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas mit + Dativ anklicken (Maus) </span>
-        <span style="position: absolute; left: 70.80pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich klicke den Button mit der Maus an.</span>
-        <span style="position: absolute; left: 272.15pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 181.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 195.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas auf + Dativ anklicken (Website/Seite) </span>
-        <span style="position: absolute; left: 70.80pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich klicke den Link auf der Website an.</span>
-        <span style="position: absolute; left: 273.49pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 223.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 236.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + Akkusativ + angeklickt </span>
-        <span style="position: absolute; left: 70.80pt; top: 250.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe den Link angeklickt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 264.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 278.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 291.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 305.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Ankommen – to arrive (ankommen – kam an – ist angekommen) </span>
-        <span style="position: absolute; left: 70.80pt; top: 319.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 333.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +ankommen + in + Dativ (Ort) </span>
-        <span style="position: absolute; left: 70.80pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich komme in Berlin an.</span>
-        <span style="position: absolute; left: 195.14pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 361.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 374.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +ankommen + bei + Dativ (Person/Ort) </span>
-        <span style="position: absolute; left: 70.80pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Wir kommen bei unseren Freunden an.</span>
-        <span style="position: absolute; left: 272.81pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 402.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 416.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +ankommen + um + Akkusativ (Zeit) </span>
-        <span style="position: absolute; left: 70.80pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Der Zug kommt um 8 Uhr an.</span>
-        <span style="position: absolute; left: 224.47pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 443.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 457.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +sein + angekommen </span>
-        <span style="position: absolute; left: 70.80pt; top: 471.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich bin gestern in Berlin angekommen. </span>
-        <span style="position: absolute; left: 70.80pt; top: 485.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 499.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 512.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 526.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Ankreuzen – to tick, to check (a box) </span>
-        <span style="position: absolute; left: 70.80pt; top: 540.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 554.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas ankreuzen + Akkusativ (Antwort/Feld) </span>
-        <span style="position: absolute; left: 70.80pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich kreuze die richtige Antwort an.</span>
-        <span style="position: absolute; left: 250.77pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 581.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 595.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas auf + Dativ ankreuzen (Formular) </span>
-        <span style="position: absolute; left: 70.80pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich kreuze das Feld auf dem Formular an.</span>
-        <span style="position: absolute; left: 287.46pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 623.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 637.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas mit + Dativ ankreuzen (Stift) </span>
-        <span style="position: absolute; left: 70.80pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich kreuze die Antwort mit einem Stift an.</span>
-        <span style="position: absolute; left: 287.43pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 664.43pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 678.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + Akkusativ + angekreuzt </span>
-        <span style="position: absolute; left: 70.80pt; top: 692.03pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe die richtige Antwort angekreuzt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
-        <span style="position: absolute; left: 214.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
+        
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Anklicken – to click on</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Anklicken – to click on')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Anklicken – to click on')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas anklicken + Akkusativ (Link/Schaltfläche)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich klicke den Link an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich klicke den Link an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich klicke den Link an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas mit + Dativ anklicken (Maus)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich klicke den Button mit der Maus an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich klicke den Button mit der Maus an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich klicke den Button mit der Maus an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas auf + Dativ anklicken (Website/Seite)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich klicke den Link auf der Website an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich klicke den Link auf der Website an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich klicke den Link auf der Website an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + angeklickt</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe den Link angeklickt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe den Link angeklickt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe den Link angeklickt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Ankommen – to arrive (ankommen – kam an – ist angekommen)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ankommen – to arrive (ankommen – kam an – ist angekommen)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ankommen – to arrive (ankommen – kam an – ist angekommen)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +ankommen + in + Dativ (Ort)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich komme in Berlin an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich komme in Berlin an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich komme in Berlin an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +ankommen + bei + Dativ (Person/Ort)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir kommen bei unseren Freunden an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Wir kommen bei unseren Freunden an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Wir kommen bei unseren Freunden an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +ankommen + um + Akkusativ (Zeit)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Zug kommt um 8 Uhr an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Der Zug kommt um 8 Uhr an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Der Zug kommt um 8 Uhr an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 457.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sein + angekommen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bin gestern in Berlin angekommen.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich bin gestern in Berlin angekommen.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich bin gestern in Berlin angekommen.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Ankreuzen – to tick, to check (a box)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ankreuzen – to tick, to check (a box)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ankreuzen – to tick, to check (a box)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas ankreuzen + Akkusativ (Antwort/Feld)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich kreuze die richtige Antwort an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich kreuze die richtige Antwort an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich kreuze die richtige Antwort an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas auf + Dativ ankreuzen (Formular)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich kreuze das Feld auf dem Formular an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich kreuze das Feld auf dem Formular an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich kreuze das Feld auf dem Formular an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas mit + Dativ ankreuzen (Stift)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich kreuze die Antwort mit einem Stift an.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich kreuze die Antwort mit einem Stift an.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich kreuze die Antwort mit einem Stift an.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 678.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + angekreuzt</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe die richtige Antwort angekreuzt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe die richtige Antwort angekreuzt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe die richtige Antwort angekreuzt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
     </div>
+
+    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
+    <div id="translateModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>🌐 Translation</h3>
+            <div class="modal-section">
+                <strong>German (Original):</strong>
+                <span id="originalText" style="display: block; background: #f9f9f9; padding: 4px; border-radius: 4px;"></span>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee;">
+            <div class="modal-section">
+                <strong>English Translation:</strong>
+                <span id="englishText" style="display: block;">Translating...</span>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function speakText(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'de-DE';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        async function translateFree(text) {
+            document.getElementById('originalText').innerText = text;
+            document.getElementById('englishText').innerText = 'Translating...';
+            document.getElementById('translateModal').style.display = 'flex';
+
+            try {
+                const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const dataEn = await resEn.json();
+                document.getElementById('englishText').innerText = dataEn[0].map(item => item[0]).join('');
+            } catch (err) {
+                document.getElementById('englishText').innerText = 'Error fetching translation';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('translateModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

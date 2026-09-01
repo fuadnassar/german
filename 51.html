@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Page 51</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة 51</title>
     <style>
         body {
             margin: 0;
@@ -10,6 +11,7 @@
             background-color: #e0e0e0;
             display: flex;
             justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         .page-wrapper {
             position: relative;
@@ -18,69 +20,274 @@
             background-color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
+        }
+        .line-container .btn-group {
+            display: inline-flex;
+            gap: 2px;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+            margin-left: 6px;
+        }
+        .line-container:hover .btn-group {
+            opacity: 1;
+        }
+        .action-btn {
+            border: none;
+            background: #f0f0f0;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            padding: 1px 4px;
+            line-height: 1;
+        }
+        .action-btn:hover {
+            background: #007aff;
+            color: white;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            direction: ltr;
+        }
+        .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
+        .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
+        .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
+        .close-btn {
+            background: #007aff; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
         }
     </style>
 </head>
 <body>
+
     <div class="page-wrapper">
-        <span style="position: absolute; left: 70.80pt; top: 71.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 85.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Verzögern – to delay, to postpone </span>
-        <span style="position: absolute; left: 70.80pt; top: 98.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 112.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas verzögern + Akkusativ (Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Der Unfall verzögert den Verkehr.</span>
-        <span style="position: absolute; left: 247.74pt; top: 126.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 140.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 153.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +sich verzögern </span>
-        <span style="position: absolute; left: 70.80pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Der Flug verzögert sich.</span>
-        <span style="position: absolute; left: 194.09pt; top: 167.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 181.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 195.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas durch + Akkusativ verzögern (Grund) </span>
-        <span style="position: absolute; left: 70.80pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Der Bau verzögert sich durch den Regen.</span>
-        <span style="position: absolute; left: 281.77pt; top: 209.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 223.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 236.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + Akkusativ + verzögert </span>
-        <span style="position: absolute; left: 70.80pt; top: 250.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Der Unfall hat den Verkehr verzögert. </span>
-        <span style="position: absolute; left: 70.80pt; top: 264.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 278.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 291.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 305.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Wählen – to choose, to vote, to dial (wählen – wählte – hat gewählt) </span>
-        <span style="position: absolute; left: 70.80pt; top: 319.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 333.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +etwas wählen + Akkusativ (Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich wähle das blaue Kleid.</span>
-        <span style="position: absolute; left: 205.82pt; top: 347.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 361.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 374.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +jemanden wählen + Akkusativ (Person/Politik) </span>
-        <span style="position: absolute; left: 70.80pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Wir wählen einen neuen Präsidenten.</span>
-        <span style="position: absolute; left: 262.47pt; top: 388.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 402.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 416.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +zwischen + Dativ wählen </span>
-        <span style="position: absolute; left: 70.80pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich wähle zwischen zwei Angeboten.</span>
-        <span style="position: absolute; left: 256.45pt; top: 429.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 443.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 457.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + Akkusativ + gewählt </span>
-        <span style="position: absolute; left: 70.80pt; top: 471.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe das blaue Kleid gewählt. </span>
-        <span style="position: absolute; left: 70.80pt; top: 485.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 499.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 512.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 526.67pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">Warten – to wait (warten – wartete – hat gewartet) </span>
-        <span style="position: absolute; left: 70.80pt; top: 540.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 554.27pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +warten + auf + Akkusativ (Person/Sache) </span>
-        <span style="position: absolute; left: 70.80pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich warte auf den Bus.</span>
-        <span style="position: absolute; left: 186.48pt; top: 567.95pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 581.87pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 595.55pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +warten + bei + Dativ (Ort/Person) </span>
-        <span style="position: absolute; left: 70.80pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich warte beim Arzt.</span>
-        <span style="position: absolute; left: 177.43pt; top: 609.47pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 623.15pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 637.07pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +warten + bis + Nebensatz </span>
-        <span style="position: absolute; left: 70.80pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich warte, bis du kommst.</span>
-        <span style="position: absolute; left: 204.14pt; top: 650.75pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 664.43pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;"> </span>
-        <span style="position: absolute; left: 70.80pt; top: 678.35pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal; white-space: pre;">S +haben + auf + Akkusativ + gewartet </span>
-        <span style="position: absolute; left: 70.80pt; top: 692.03pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;">Ich habe auf den Bus gewartet. </span>
-        <span style="position: absolute; left: 70.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
-        <span style="position: absolute; left: 214.80pt; top: 706.19pt; font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold; white-space: pre;"> </span>
+        
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Verzögern – to delay, to postpone</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Verzögern – to delay, to postpone')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Verzögern – to delay, to postpone')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas verzögern + Akkusativ (Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Unfall verzögert den Verkehr.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Der Unfall verzögert den Verkehr.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Der Unfall verzögert den Verkehr.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sich verzögern</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Flug verzögert sich.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Der Flug verzögert sich.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Der Flug verzögert sich.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas durch + Akkusativ verzögern (Grund)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Bau verzögert sich durch den Regen.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Der Bau verzögert sich durch den Regen.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Der Bau verzögert sich durch den Regen.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + verzögert</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Unfall hat den Verkehr verzögert.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Der Unfall hat den Verkehr verzögert.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Der Unfall hat den Verkehr verzögert.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Wählen – to choose, to vote, to dial (wählen – wählte – hat gewählt)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Wählen – to choose, to vote, to dial (wählen – wählte – hat gewählt)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Wählen – to choose, to vote, to dial (wählen – wählte – hat gewählt)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas wählen + Akkusativ (Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich wähle das blaue Kleid.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich wähle das blaue Kleid.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich wähle das blaue Kleid.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +jemanden wählen + Akkusativ (Person/Politik)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir wählen einen neuen Präsidenten.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Wir wählen einen neuen Präsidenten.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Wir wählen einen neuen Präsidenten.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +zwischen + Dativ wählen</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich wähle zwischen zwei Angeboten.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich wähle zwischen zwei Angeboten.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich wähle zwischen zwei Angeboten.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 457.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + gewählt</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe das blaue Kleid gewählt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe das blaue Kleid gewählt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe das blaue Kleid gewählt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Warten – to wait (warten – wartete – hat gewartet)</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Warten – to wait (warten – wartete – hat gewartet)')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Warten – to wait (warten – wartete – hat gewartet)')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +warten + auf + Akkusativ (Person/Sache)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich warte auf den Bus.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich warte auf den Bus.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich warte auf den Bus.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +warten + bei + Dativ (Ort/Person)</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich warte beim Arzt.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich warte beim Arzt.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich warte beim Arzt.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +warten + bis + Nebensatz</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich warte, bis du kommst.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich warte, bis du kommst.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich warte, bis du kommst.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 678.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + auf + Akkusativ + gewartet</span>
+                        </div>
+
+                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe auf den Bus gewartet.</span>
+                            <div class="btn-group">
+                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe auf den Bus gewartet.')" title="Translation">🌐</button>
+                                <button class="action-btn speak-btn" onclick="speakText('Ich habe auf den Bus gewartet.')" title="Listen">🔊</button>
+                            </div>
+                        </div>
     </div>
+
+    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
+    <div id="translateModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>🌐 Translation</h3>
+            <div class="modal-section">
+                <strong>German (Original):</strong>
+                <span id="originalText" style="display: block; background: #f9f9f9; padding: 4px; border-radius: 4px;"></span>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee;">
+            <div class="modal-section">
+                <strong>English Translation:</strong>
+                <span id="englishText" style="display: block;">Translating...</span>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function speakText(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'de-DE';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        async function translateFree(text) {
+            document.getElementById('originalText').innerText = text;
+            document.getElementById('englishText').innerText = 'Translating...';
+            document.getElementById('translateModal').style.display = 'flex';
+
+            try {
+                const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const dataEn = await resEn.json();
+                document.getElementById('englishText').innerText = dataEn[0].map(item => item[0]).join('');
+            } catch (err) {
+                document.getElementById('englishText').innerText = 'Error fetching translation';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('translateModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
