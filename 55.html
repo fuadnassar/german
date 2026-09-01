@@ -46,6 +46,29 @@
             color: white;
         }
 
+        .blank-word {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: transparent;
+            border-bottom: 2px solid #007aff;
+            border-radius: 3px;
+            padding: 0 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            min-width: 24px;
+            text-align: center;
+        }
+        .blank-word:hover {
+            background-color: #cbd5e1;
+        }
+        .blank-word.revealed {
+            color: #0d9488 !important;
+            background-color: #f0fdf4;
+            border-bottom: 2px solid #10b981;
+            font-weight: bold;
+        }
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -80,7 +103,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Ablesen – to read off, to take a reading (ablesen – las ab – hat abgelesen)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('ablesen – las ab – hat abgelesen')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -89,7 +112,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese die Uhrzeit ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">die</span> Uhrzeit ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich lese die Uhrzeit ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich lese die Uhrzeit ab.')" title="Listen">🔊</button>
@@ -101,7 +124,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese die Zahl vom Bildschirm ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">die</span> Zahl vom Bildschirm ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich lese die Zahl vom Bildschirm ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich lese die Zahl vom Bildschirm ab.')" title="Listen">🔊</button>
@@ -113,7 +136,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese die Temperatur am Thermometer ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich lese <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">die</span> Temperatur am Thermometer ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich lese die Temperatur am Thermometer ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich lese die Temperatur am Thermometer ab.')" title="Listen">🔊</button>
@@ -125,7 +148,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe die Temperatur am Thermometer abgelesen.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">die</span> Temperatur am Thermometer abgelesen.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich habe die Temperatur am Thermometer abgelesen.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich habe die Temperatur am Thermometer abgelesen.')" title="Listen">🔊</button>
@@ -136,7 +159,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Abmelden – to deregister, to log out (abmelden – meldete ab – hat abgemeldet)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('abmelden – meldete ab – hat abgemeldet')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -145,7 +168,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich bei der Schule ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich bei <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">der</span> Schule ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich melde mich bei der Schule ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich melde mich bei der Schule ab.')" title="Listen">🔊</button>
@@ -169,7 +192,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich aus dem Konto ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich melde mich aus <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">dem</span> Konto ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich melde mich aus dem Konto ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich melde mich aus dem Konto ab.')" title="Listen">🔊</button>
@@ -192,7 +215,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Abschließen – to lock, to finish, to complete (abschließen – schloss ab – hat abgeschlossen)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('abschließen – schloss ab – hat abgeschlossen')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -201,7 +224,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schließe die Tür ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schließe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">die</span> Tür ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich schließe die Tür ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich schließe die Tür ab.')" title="Listen">🔊</button>
@@ -213,7 +236,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schließe einen Vertrag mit der Firma ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schließe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">einen</span> Vertrag mit <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">der</span> Firma ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich schließe einen Vertrag mit der Firma ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich schließe einen Vertrag mit der Firma ab.')" title="Listen">🔊</button>
@@ -225,7 +248,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Sie schließt ihre Ausbildung erfolgreich ab.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Sie schließt <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ihre</span> Ausbildung erfolgreich ab.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Sie schließt ihre Ausbildung erfolgreich ab.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Sie schließt ihre Ausbildung erfolgreich ab.')" title="Listen">🔊</button>
@@ -237,7 +260,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe den Vertrag abgeschlossen.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">den</span> Vertrag abgeschlossen.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich habe den Vertrag abgeschlossen.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich habe den Vertrag abgeschlossen.')" title="Listen">🔊</button>
@@ -245,7 +268,6 @@
                         </div>
     </div>
 
-    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
     <div id="translateModal" class="modal-overlay">
         <div class="modal-box">
             <h3>🌐 Translation</h3>

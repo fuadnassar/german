@@ -46,6 +46,29 @@
             color: white;
         }
 
+        .blank-word {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: transparent;
+            border-bottom: 2px solid #007aff;
+            border-radius: 3px;
+            padding: 0 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            min-width: 24px;
+            text-align: center;
+        }
+        .blank-word:hover {
+            background-color: #cbd5e1;
+        }
+        .blank-word.revealed {
+            color: #0d9488 !important;
+            background-color: #f0fdf4;
+            border-bottom: 2px solid #10b981;
+            font-weight: bold;
+        }
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -80,7 +103,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Sinken – to sink, to decrease, to fall (sinken – sank – ist gesunken)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Sinken – to sink, to decrease, to fall (sinken – sank – ist gesunken)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Sinken – to sink, to decrease, to fall (sinken – sank – ist gesunken)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('sinken – sank – ist gesunken')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -89,7 +112,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Das Schiff sinkt.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;"><span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">Das</span> Schiff sinkt.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Das Schiff sinkt.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Das Schiff sinkt.')" title="Listen">🔊</button>
@@ -101,7 +124,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Temperatur sinkt auf zehn Grad.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;"><span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">Die</span> Temperatur sinkt auf zehn Grad.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Die Temperatur sinkt auf zehn Grad.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Die Temperatur sinkt auf zehn Grad.')" title="Listen">🔊</button>
@@ -113,7 +136,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Preise sinken um zehn Prozent.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;"><span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">Die</span> Preise sinken um zehn Prozent.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Die Preise sinken um zehn Prozent.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Die Preise sinken um zehn Prozent.')" title="Listen">🔊</button>
@@ -125,7 +148,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Temperatur ist gestern gesunken.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;"><span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">Die</span> Temperatur ist gestern gesunken.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Die Temperatur ist gestern gesunken.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Die Temperatur ist gestern gesunken.')" title="Listen">🔊</button>
@@ -136,7 +159,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Sorgen – to care for, to worry, to make sure (sorgen – sorgte – hat gesorgt)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Sorgen – to care for, to worry, to make sure (sorgen – sorgte – hat gesorgt)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Sorgen – to care for, to worry, to make sure (sorgen – sorgte – hat gesorgt)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('sorgen – sorgte – hat gesorgt')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -145,7 +168,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich sorge mich um meine Familie.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich sorge mich um <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meine</span> Familie.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich sorge mich um meine Familie.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich sorge mich um meine Familie.')" title="Listen">🔊</button>
@@ -157,7 +180,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich sorge für meine Familie.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich sorge für <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meine</span> Familie.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich sorge für meine Familie.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich sorge für meine Familie.')" title="Listen">🔊</button>
@@ -181,7 +204,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe für meine Familie gesorgt.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe für <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meine</span> Familie gesorgt.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich habe für meine Familie gesorgt.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich habe für meine Familie gesorgt.')" title="Listen">🔊</button>
@@ -192,7 +215,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Sparen – to save, to economize (sparen – sparte – hat gespart)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Sparen – to save, to economize (sparen – sparte – hat gespart)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Sparen – to save, to economize (sparen – sparte – hat gespart)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('sparen – sparte – hat gespart')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -201,7 +224,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich spare mein Geld.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich spare <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">mein</span> Geld.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich spare mein Geld.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich spare mein Geld.')" title="Listen">🔊</button>
@@ -213,7 +236,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich spare für ein neues Auto.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich spare für <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ein</span> neues Auto.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich spare für ein neues Auto.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich spare für ein neues Auto.')" title="Listen">🔊</button>
@@ -225,7 +248,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir sparen an den Kosten.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir sparen an <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">den</span> Kosten.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Wir sparen an den Kosten.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Wir sparen an den Kosten.')" title="Listen">🔊</button>
@@ -245,7 +268,6 @@
                         </div>
     </div>
 
-    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
     <div id="translateModal" class="modal-overlay">
         <div class="modal-box">
             <h3>🌐 Translation</h3>

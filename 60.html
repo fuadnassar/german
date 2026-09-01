@@ -46,6 +46,29 @@
             color: white;
         }
 
+        .blank-word {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: transparent;
+            border-bottom: 2px solid #007aff;
+            border-radius: 3px;
+            padding: 0 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            min-width: 24px;
+            text-align: center;
+        }
+        .blank-word:hover {
+            background-color: #cbd5e1;
+        }
+        .blank-word.revealed {
+            color: #0d9488 !important;
+            background-color: #f0fdf4;
+            border-bottom: 2px solid #10b981;
+            font-weight: bold;
+        }
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -80,7 +103,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Aussehen – to look, to appear (aussehen – sah aus – hat ausgesehen)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Aussehen – to look, to appear (aussehen – sah aus – hat ausgesehen)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Aussehen – to look, to appear (aussehen – sah aus – hat ausgesehen)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('aussehen – sah aus – hat ausgesehen')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -101,7 +124,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er sieht wie sein Vater aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er sieht wie <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">sein</span> Vater aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Er sieht wie sein Vater aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Er sieht wie sein Vater aus.')" title="Listen">🔊</button>
@@ -136,7 +159,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Aussteigen – to get off, to get out (aussteigen – stieg aus – ist ausgestiegen)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Aussteigen – to get off, to get out (aussteigen – stieg aus – ist ausgestiegen)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Aussteigen – to get off, to get out (aussteigen – stieg aus – ist ausgestiegen)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('aussteigen – stieg aus – ist ausgestiegen')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -145,7 +168,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich steige aus dem Bus aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich steige aus <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">dem</span> Bus aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich steige aus dem Bus aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich steige aus dem Bus aus.')" title="Listen">🔊</button>
@@ -157,7 +180,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir steigen an der nächsten Haltestelle aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir steigen an <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">der</span> nächsten Haltestelle aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Wir steigen an der nächsten Haltestelle aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Wir steigen an der nächsten Haltestelle aus.')" title="Listen">🔊</button>
@@ -169,7 +192,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich steige bei der nächsten Station aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich steige bei <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">der</span> nächsten Station aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich steige bei der nächsten Station aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich steige bei der nächsten Station aus.')" title="Listen">🔊</button>
@@ -181,7 +204,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bin aus dem Zug ausgestiegen.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich bin aus <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">dem</span> Zug ausgestiegen.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich bin aus dem Zug ausgestiegen.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich bin aus dem Zug ausgestiegen.')" title="Listen">🔊</button>
@@ -192,7 +215,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Aussuchen – to choose, to pick out (aussuchen – suchte aus – hat ausgesucht)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Aussuchen – to choose, to pick out (aussuchen – suchte aus – hat ausgesucht)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Aussuchen – to choose, to pick out (aussuchen – suchte aus – hat ausgesucht)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('aussuchen – suchte aus – hat ausgesucht')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -201,7 +224,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich suche ein Geschenk aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich suche <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ein</span> Geschenk aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich suche ein Geschenk aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich suche ein Geschenk aus.')" title="Listen">🔊</button>
@@ -213,7 +236,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich suche mir ein neues Handy aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich suche mir <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ein</span> neues Handy aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich suche mir ein neues Handy aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich suche mir ein neues Handy aus.')" title="Listen">🔊</button>
@@ -225,7 +248,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich suche ein Kleid aus den Angeboten aus.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich suche <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ein</span> Kleid aus <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">den</span> Angeboten aus.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich suche ein Kleid aus den Angeboten aus.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich suche ein Kleid aus den Angeboten aus.')" title="Listen">🔊</button>
@@ -237,7 +260,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe ein schönes Geschenk ausgesucht.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ein</span> schönes Geschenk ausgesucht.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich habe ein schönes Geschenk ausgesucht.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich habe ein schönes Geschenk ausgesucht.')" title="Listen">🔊</button>
@@ -245,7 +268,6 @@
                         </div>
     </div>
 
-    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
     <div id="translateModal" class="modal-overlay">
         <div class="modal-box">
             <h3>🌐 Translation</h3>

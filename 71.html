@@ -46,6 +46,29 @@
             color: white;
         }
 
+        .blank-word {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: transparent;
+            border-bottom: 2px solid #007aff;
+            border-radius: 3px;
+            padding: 0 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            min-width: 24px;
+            text-align: center;
+        }
+        .blank-word:hover {
+            background-color: #cbd5e1;
+        }
+        .blank-word.revealed {
+            color: #0d9488 !important;
+            background-color: #f0fdf4;
+            border-bottom: 2px solid #10b981;
+            font-weight: bold;
+        }
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -80,7 +103,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Erreichen – to reach, to achieve, to contact (erreichen – erreichte – hat erreicht)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Erreichen – to reach, to achieve, to contact (erreichen – erreichte – hat erreicht)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Erreichen – to reach, to achieve, to contact (erreichen – erreichte – hat erreicht)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('erreichen – erreichte – hat erreicht')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -89,7 +112,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erreiche mein Ziel.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erreiche <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">mein</span> Ziel.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich erreiche mein Ziel.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich erreiche mein Ziel.')" title="Listen">🔊</button>
@@ -101,7 +124,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erreiche den Bahnhof um 8 Uhr.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich erreiche <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">den</span> Bahnhof um 8 Uhr.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich erreiche den Bahnhof um 8 Uhr.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich erreiche den Bahnhof um 8 Uhr.')" title="Listen">🔊</button>
@@ -113,7 +136,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich kann meinen Lehrer telefonisch erreichen.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich kann <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">meinen</span> Lehrer telefonisch erreichen.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich kann meinen Lehrer telefonisch erreichen.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich kann meinen Lehrer telefonisch erreichen.')" title="Listen">🔊</button>
@@ -125,7 +148,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe mein Ziel erreicht.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">mein</span> Ziel erreicht.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Ich habe mein Ziel erreicht.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Ich habe mein Ziel erreicht.')" title="Listen">🔊</button>
@@ -136,7 +159,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Fehlen – to be missing, to lack (fehlen – fehlte – hat gefehlt)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Fehlen – to be missing, to lack (fehlen – fehlte – hat gefehlt)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Fehlen – to be missing, to lack (fehlen – fehlte – hat gefehlt)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('fehlen – fehlte – hat gefehlt')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -169,7 +192,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Mir fehlt ein Stift.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Mir fehlt <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">ein</span> Stift.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Mir fehlt ein Stift.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Mir fehlt ein Stift.')" title="Listen">🔊</button>
@@ -192,7 +215,7 @@
                             <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Fliegen – to fly (fliegen – flog – ist geflogen)</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Fliegen – to fly (fliegen – flog – ist geflogen)')" title="Translation">🌐</button>
-                                <button class="action-btn speak-btn" onclick="speakText('Fliegen – to fly (fliegen – flog – ist geflogen)')" title="Listen">🔊</button>
+                                <button class="action-btn speak-btn" onclick="speakText('fliegen – flog – ist geflogen')" title="Listen">🔊</button>
                             </div>
                         </div>
 
@@ -213,7 +236,7 @@
                         </div>
 
                         <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir fliegen mit dem Flugzeug.</span>
+                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Wir fliegen mit <span class="blank-word" onclick="this.classList.toggle('revealed')" title="انقر لإظهار الكلمة">dem</span> Flugzeug.</span>
                             <div class="btn-group">
                                 <button class="action-btn translate-btn" onclick="translateFree('Wir fliegen mit dem Flugzeug.')" title="Translation">🌐</button>
                                 <button class="action-btn speak-btn" onclick="speakText('Wir fliegen mit dem Flugzeug.')" title="Listen">🔊</button>
@@ -245,7 +268,6 @@
                         </div>
     </div>
 
-    <!-- نافذة الترجمة تحتوي على الإنجليزية فقط -->
     <div id="translateModal" class="modal-overlay">
         <div class="modal-box">
             <h3>🌐 Translation</h3>
