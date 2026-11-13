@@ -5,360 +5,330 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة 200</title>
     <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background-color: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-        .page-wrapper {
-            position: relative;
-            width: 595.20pt;
-            height: 841.92pt;
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border-radius: 4px;
-            overflow: visible;
-        }
-        .line-container .btn-group {
-            display: inline-flex;
-            gap: 2px;
-            opacity: 0.3;
-            transition: opacity 0.2s;
-            margin-left: 6px;
-        }
-        .line-container:hover .btn-group {
-            opacity: 1;
-        }
-        .action-btn {
-            border: none;
-            background: #f0f0f0;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 10px;
-            padding: 1px 4px;
-            line-height: 1;
-        }
-        .action-btn:hover {
-            background: #007aff;
-            color: white;
-        }
-
-        .blank-word {
-            display: inline-block;
-            background-color: #e2e8f0;
-            color: transparent;
-            border-bottom: 2px solid #007aff;
-            border-radius: 3px;
-            padding: 0 4px;
-            cursor: pointer;
-            user-select: none;
-            transition: all 0.2s ease;
-            min-width: 24px;
-            text-align: center;
-        }
-        .blank-word:hover {
-            background-color: #cbd5e1;
-        }
-        .blank-word.revealed {
-            color: #0d9488 !important;
-            background-color: #f0fdf4;
-            border-bottom: 2px solid #10b981;
-            font-weight: bold;
-        }
-
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: 350px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            direction: ltr;
-        }
+        body { margin: 0; padding: 20px; background-color: #e0e0e0; display: flex; justify-content: center; font-family: system-ui, -apple-system, sans-serif; }
+        .page-wrapper { position: relative; width: 595.20pt; height: 841.92pt; background-color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 4px; overflow: visible; }
+        .line-container .btn-group { display: inline-flex; gap: 2px; opacity: 0.3; transition: opacity 0.2s; margin-left: 6px; }
+        .line-container:hover .btn-group { opacity: 1; }
+        .action-btn { border: none; background: #f0f0f0; border-radius: 3px; cursor: pointer; font-size: 10px; padding: 1px 4px; line-height: 1; }
+        .action-btn:hover { background: #00c9a7; color: white; }
+        .action-btn.playing { background: #00c9a7; color: white; }
+ 
+        .blank-word { display: inline-block; background-color: #e2e8f0; color: transparent; border-bottom: 2px solid #00c9a7; border-radius: 3px; padding: 0 4px; cursor: pointer; user-select: none; transition: all 0.2s ease; min-width: 24px; text-align: center; }
+        .blank-word:hover { background-color: #cbd5e1; }
+        .blank-word.revealed { color: #0d9488 !important; background-color: #f0fdf4; border-bottom: 2px solid #10b981; font-weight: bold; }
+ 
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-box { background: white; padding: 20px; border-radius: 8px; width: 380px; max-width: 92vw; box-shadow: 0 10px 25px rgba(0,0,0,0.2); direction: rtl; font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif; }
         .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
-        .modal-section { margin-bottom: 12px; font-size: 14px; text-align: left; }
+        .modal-section { margin-bottom: 12px; font-size: 14px; }
         .modal-section strong { display: block; color: #666; font-size: 12px; margin-bottom: 2px; }
-        .translation-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-            background: #f9f9f9;
-            padding: 6px;
-            border-radius: 4px;
-        }
-        .close-btn {
-            background: #007aff; color: white; border: none;
-            padding: 6px 12px; border-radius: 4px; cursor: pointer; float: right;
-        }
+        .box { display: block; background: #f9f9f9; padding: 8px; border-radius: 4px; line-height: 1.6; }
+        #originalText { direction: ltr; text-align: left; }
+        #arabicText { font-size: 17px; font-weight: bold; text-align: right; }
+        #analyticalText { font-size: 15px; text-align: right; }
+        .modal-btn { background: #00c9a7; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .modal-btn.secondary { background: #e5e7eb; color: #111; }
+        .modal-btn:disabled { opacity: 0.6; cursor: default; }
+        .modal-actions { display: flex; gap: 8px; justify-content: space-between; margin-top: 10px; }
     </style>
 </head>
 <body>
-
+ 
     <div class="page-wrapper">
-        
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Parken – to park (parken – parkte – hat geparkt)</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('parken – parkte – hat geparkt', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Parken – to park (parken – parkte – hat geparkt)')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +parken</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich parke hier.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Ich parke hier.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich parke hier.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas + in + Dativ parken</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich parke das Auto in der Garage.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Ich parke das Auto in der Garage.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich parke das Auto in der Garage.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +auf + Dativ parken</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er parkt auf dem Parkplatz.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Er parkt auf dem Parkplatz.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Er parkt auf dem Parkplatz.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + geparkt</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe vor dem Haus geparkt.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Ich habe vor dem Haus geparkt.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich habe vor dem Haus geparkt.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Quietschen – to squeak, to screech (quietschen – quietschte – hat gequietscht)</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('quietschen – quietschte – hat gequietscht', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Quietschen – to squeak, to screech (quietschen – quietschte – hat gequietscht)')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +quietschen</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Bremsen quietschen.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Die Bremsen quietschen.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Die Bremsen quietschen.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas quietscht</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Tür quietscht.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Die Tür quietscht.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Die Tür quietscht.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +bei + Dativ quietschen</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Reifen quietschen beim Bremsen.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Die Reifen quietschen beim Bremsen.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Die Reifen quietschen beim Bremsen.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 457.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + gequietscht</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Bremsen haben laut gequietscht.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Die Bremsen haben laut gequietscht.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Die Bremsen haben laut gequietscht.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">Regulieren – to regulate, to adjust (regulieren – regulierte – hat reguliert)</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('regulieren – regulierte – hat reguliert', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Regulieren – to regulate, to adjust (regulieren – regulierte – hat reguliert)')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas regulieren + Akkusativ</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich reguliere die Heizung.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Ich reguliere die Heizung.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Ich reguliere die Heizung.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas + auf + Akkusativ regulieren</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Anlage reguliert die Temperatur auf 20 Grad.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Die Anlage reguliert die Temperatur auf 20 Grad.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Die Anlage reguliert die Temperatur auf 20 Grad.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas + mithilfe + Genitiv regulieren</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Das Gerät reguliert die Temperatur mithilfe eines Sensors.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Das Gerät reguliert die Temperatur mithilfe eines Sensors.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Das Gerät reguliert die Temperatur mithilfe eines Sensors.')" title="Translation">文A</button>
-                            </div>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 678.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + reguliert</span>
-                        </div>
-
-                        <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-                            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Das System hat die Temperatur reguliert.</span>
-                            <div class="btn-group">
-                                <button class="action-btn speak-btn" onclick="speakText('Das System hat die Temperatur reguliert.', 'de-DE')" title="Listen (German)">🔊</button>
-                                <button class="action-btn translate-btn" onclick="translateFree('Das System hat die Temperatur reguliert.')" title="Translation">文A</button>
-                            </div>
-                        </div>
+        <div class="line-container verb-header" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">parken – <bdi dir="rtl">يركن</bdi> (habe ____ geparkt)</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 112.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +parken</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich parke hier.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Ich parke hier." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Ich parke hier." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 153.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas + in + Dativ parken</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich parke das Auto in der Garage.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Ich parke das Auto in der Garage." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Ich parke das Auto in der Garage." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 195.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +auf + Dativ parken</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er parkt auf dem Parkplatz.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Er parkt auf dem Parkplatz." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Er parkt auf dem Parkplatz." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 236.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + geparkt</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe vor dem Haus geparkt.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Ich habe vor dem Haus geparkt." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Ich habe vor dem Haus geparkt." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container verb-header" style="position: absolute; left: 70.80pt; top: 305.87pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">quietschen – <bdi dir="rtl">يصرخ / يزعق</bdi> (habe ____ gequietscht)</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 333.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +quietschen</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Bremsen quietschen.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Die Bremsen quietschen." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Die Bremsen quietschen." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 374.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas quietscht</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Tür quietscht.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Die Tür quietscht." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Die Tür quietscht." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 416.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +bei + Dativ quietschen</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Reifen quietschen beim Bremsen.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Die Reifen quietschen beim Bremsen." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Die Reifen quietschen beim Bremsen." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 457.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + gequietscht</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Bremsen haben laut gequietscht.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Die Bremsen haben laut gequietscht." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Die Bremsen haben laut gequietscht." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container verb-header" style="position: absolute; left: 70.80pt; top: 526.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">regulieren – <bdi dir="rtl">ينظم / يضبط</bdi> (habe ____ reguliert)</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 554.27pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas regulieren + Akkusativ</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich reguliere die Heizung.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Ich reguliere die Heizung." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Ich reguliere die Heizung." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 595.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas + auf + Akkusativ regulieren</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Die Anlage reguliert die Temperatur auf 20 Grad.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Die Anlage reguliert die Temperatur auf 20 Grad." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Die Anlage reguliert die Temperatur auf 20 Grad." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 637.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas + mithilfe + Genitiv regulieren</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Das Gerät reguliert die Temperatur mithilfe eines Sensors.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Das Gerät reguliert die Temperatur mithilfe eines Sensors." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Das Gerät reguliert die Temperatur mithilfe eines Sensors." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 678.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + reguliert</span>
+        </div>
+        <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Das System hat die Temperatur reguliert.</span>
+            <div class="btn-group">
+                <button class="action-btn speak-btn" data-speak="Das System hat die Temperatur reguliert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+                <button class="action-btn translate-btn" data-full="Das System hat die Temperatur reguliert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+            </div>
+        </div>
     </div>
-
-    <div id="translateModal" class="modal-overlay">
+ 
+    <div id="translateModal" class="modal-overlay" onclick="if(event.target===this) closeModal()">
         <div class="modal-box">
-            <h3>文A Translation</h3>
+            <h3>الترجمة</h3>
             <div class="modal-section">
-                <strong>German (Original):</strong>
-                <span id="originalText" style="display: block; background: #f9f9f9; padding: 6px; border-radius: 4px;"></span>
+                <strong>النص الألماني:</strong>
+                <span id="originalText" class="box"></span>
             </div>
             <hr style="border: none; border-top: 1px solid #eee;">
             <div class="modal-section">
-                <strong>English Translation:</strong>
-                <div class="translation-row">
-                    <span id="englishText">Translating...</span>
-                    <button id="speakEnBtn" class="action-btn" style="display:none; padding: 3px 6px;" title="Listen (English)">🔊</button>
-                </div>
+                <strong>الترجمة العربية:</strong>
+                <span id="arabicText" class="box">جاري الترجمة...</span>
             </div>
-            <button class="close-btn" onclick="closeModal()">Close</button>
+            <div class="modal-section" id="analyticalSection" style="display:none;">
+                <strong>الترجمة التحليلية المقسمة:</strong>
+                <span id="analyticalText" class="box"></span>
+            </div>
+            <div class="modal-actions">
+                <button id="analyticalBtn" class="modal-btn secondary" style="display:none;" onclick="fetchAnalytical()">🔍 ترجمة تحليلية</button>
+                <button class="modal-btn" onclick="closeModal()">إغلاق</button>
+            </div>
         </div>
     </div>
-
+ 
     <script>
-        let availableVoices = [];
-        function loadVoices() {
-            if (typeof speechSynthesis !== 'undefined') {
-                availableVoices = speechSynthesis.getVoices();
+        const CONFIG = {"proxy": "https://german-proxy.abc97-gmx.workers.dev"};
+ 
+        function generateHashKey(text) {
+            let hash = 0;
+            for (let i = 0; i < text.length; i++) {
+                hash = ((hash << 5) - hash) + text.charCodeAt(i);
+                hash = hash & hash;
             }
+            return 'audio_' + Math.abs(hash);
         }
-        loadVoices();
-        if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-            speechSynthesis.onvoiceschanged = loadVoices;
+ 
+        function base64ToBlob(dataUrl) {
+            const b64 = dataUrl.split(',').pop();
+            const bin = atob(b64);
+            const bytes = new Uint8Array(bin.length);
+            for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+            return new Blob([bytes], { type: 'audio/mpeg' });
         }
-
-        function speakText(text, lang = 'de-DE') {
+ 
+        function blobToDataUrl(blob) {
+            return new Promise((resolve, reject) => {
+                const r = new FileReader();
+                r.onloadend = () => resolve(r.result);
+                r.onerror = reject;
+                r.readAsDataURL(blob);
+            });
+        }
+ 
+        let currentAudio = null;
+        let currentText = null;
+        let currentBtn = null;
+ 
+        function stopCurrent() {
+            if (currentAudio) { currentAudio.pause(); currentAudio.src = ''; }
+            if (currentBtn) { currentBtn.classList.remove('playing'); currentBtn.textContent = '🔊'; }
+            currentAudio = null; currentText = null; currentBtn = null;
+        }
+ 
+        async function speakText(text, btn) {
             if (!text) return;
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = lang;
-            utterance.rate = 0.95;
-
-            if (availableVoices.length > 0) {
-                if (lang.startsWith('en')) {
-                    const preferredEnVoices = ['Samantha', 'Karen', 'Victoria', 'Google US English', 'Siri', 'Fiona', 'Moira'];
-                    let selectedVoice = availableVoices.find(v => preferredEnVoices.some(p => v.name.includes(p)) && v.lang.startsWith('en'));
-                    if (!selectedVoice) {
-                        selectedVoice = availableVoices.find(v => v.lang.startsWith('en') && !v.name.includes('Fred') && !v.name.includes('Albert'));
-                    }
-                    if (selectedVoice) utterance.voice = selectedVoice;
-
-                } else if (lang.startsWith('de')) {
-                    const preferredDeVoices = ['Anna', 'Helena', 'Katrin', 'Marni', 'Google Deutsch', 'Viktor', 'Siri'];
-                    let selectedVoice = availableVoices.find(v => preferredDeVoices.some(p => v.name.includes(p)) && v.lang.startsWith('de'));
-                    if (!selectedVoice) {
-                        selectedVoice = availableVoices.find(v => v.lang.startsWith('de'));
-                    }
-                    if (selectedVoice) utterance.voice = selectedVoice;
-                }
-            }
-
-            window.speechSynthesis.speak(utterance);
-        }
-
-        async function translateFree(text) {
-            document.getElementById('originalText').innerText = text;
-            document.getElementById('englishText').innerText = 'Translating...';
-            const speakEnBtn = document.getElementById('speakEnBtn');
-            speakEnBtn.style.display = 'none';
-            document.getElementById('translateModal').style.display = 'flex';
-
+            if (currentText === text) { stopCurrent(); return; }
+            stopCurrent();
+ 
+            currentText = text;
+            currentBtn = btn || null;
+            if (btn) { btn.textContent = '⏳'; }
+ 
             try {
-                const resEn = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=en&dt=t&q=${encodeURIComponent(text)}`);
-                const dataEn = await resEn.json();
-                const translatedText = dataEn[0].map(item => item[0]).join('');
-                
-                document.getElementById('englishText').innerText = translatedText;
-                
-                speakEnBtn.style.display = 'inline-block';
-                speakEnBtn.onclick = () => speakText(translatedText, 'en-US');
-
+                const cacheKey = generateHashKey(text);
+                let dataUrl = null;
+                try { dataUrl = localStorage.getItem(cacheKey); } catch (e) {}
+ 
+                let blob;
+                if (dataUrl) {
+                    blob = base64ToBlob(dataUrl);
+                } else {
+                    const res = await fetch(CONFIG.proxy + '/tts', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ text: text })
+                    });
+                    if (!res.ok) throw new Error('TTS ' + res.status);
+                    blob = await res.blob();
+                    try { localStorage.setItem(cacheKey, await blobToDataUrl(blob)); } catch (e) {}
+                }
+ 
+                if (currentText !== text) return;
+ 
+                const url = URL.createObjectURL(blob);
+                const audio = new Audio(url);
+                currentAudio = audio;
+                if (btn) { btn.classList.add('playing'); btn.textContent = '⏹'; }
+                audio.onended = () => { URL.revokeObjectURL(url); if (currentAudio === audio) stopCurrent(); };
+                await audio.play();
             } catch (err) {
-                document.getElementById('englishText').innerText = 'Error fetching translation';
+                console.error('Audio Error:', err);
+                alert('فشل تحميل الصوت من ElevenLabs');
+                stopCurrent();
             }
         }
-
+ 
+        async function callProxy(mode, text) {
+            const res = await fetch(CONFIG.proxy + '/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ mode: mode, text: text })
+            });
+            if (!res.ok) throw new Error('Proxy ' + res.status);
+            const data = await res.json();
+            return data.text;
+        }
+ 
+        let currentGerman = '';
+ 
+        async function translateText(text) {
+            currentGerman = text;
+            document.getElementById('originalText').innerText = text;
+            document.getElementById('arabicText').innerText = 'جاري الترجمة...';
+            document.getElementById('analyticalSection').style.display = 'none';
+            document.getElementById('analyticalText').innerText = '';
+            const aBtn = document.getElementById('analyticalBtn');
+            aBtn.style.display = 'none';
+            aBtn.disabled = false;
+            aBtn.innerText = '🔍 ترجمة تحليلية';
+            document.getElementById('translateModal').style.display = 'flex';
+ 
+            const wordCount = text.trim().split(/\s+/).length;
+            const isShort = wordCount <= 3;
+            const prompt = isShort
+                ? 'Translate the German word or short expression into Arabic. Return only the Arabic meaning. No explanation.'
+                : 'Translate this German text into fluent, accurate Arabic tailored for telc B1 exam preparation. Return ONLY the Arabic translation.';
+ 
+            try {
+                const out = await callProxy(isShort ? 'short' : 'long', text);
+                document.getElementById('arabicText').innerText = out;
+                if (!isShort) aBtn.style.display = 'inline-block';
+            } catch (err) {
+                console.error(err);
+                document.getElementById('arabicText').innerText = 'فشلت الترجمة. تأكد من الاتصال بالإنترنت ومن المفتاح.';
+            }
+        }
+ 
+        async function fetchAnalytical() {
+            const aBtn = document.getElementById('analyticalBtn');
+            aBtn.disabled = true;
+            aBtn.innerText = 'جاري تحليل الجملة...';
+            const prompt = 'You are a professional German-Arabic translator and linguistic analyst. Provide a segmented analytical breakdown mirroring the exact German word-order, formatted inside parentheses with hyphens (e.g., (في جامعة - يُسمح - للطالبة)). Return ONLY the formatted analytical text.';
+            try {
+                const out = await callProxy('analytical', currentGerman);
+                document.getElementById('analyticalText').innerText = out;
+                document.getElementById('analyticalSection').style.display = 'block';
+                aBtn.style.display = 'none';
+            } catch (err) {
+                console.error(err);
+                aBtn.disabled = false;
+                aBtn.innerText = 'فشل، أعد المحاولة';
+            }
+        }
+ 
         function closeModal() {
             document.getElementById('translateModal').style.display = 'none';
         }
