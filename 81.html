@@ -12,11 +12,9 @@
         .action-btn { border: none; background: #f0f0f0; border-radius: 3px; cursor: pointer; font-size: 10px; padding: 1px 4px; line-height: 1; }
         .action-btn:hover { background: #00c9a7; color: white; }
         .action-btn.playing { background: #00c9a7; color: white; }
- 
         .blank-word { display: inline-block; background-color: #e2e8f0; color: transparent; border-bottom: 2px solid #00c9a7; border-radius: 3px; padding: 0 4px; cursor: pointer; user-select: none; transition: all 0.2s ease; min-width: 24px; text-align: center; }
         .blank-word:hover { background-color: #cbd5e1; }
         .blank-word.revealed { color: #0d9488 !important; background-color: #f0fdf4; border-bottom: 2px solid #10b981; font-weight: bold; }
- 
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1000; justify-content: center; align-items: center; }
         .modal-box { background: white; padding: 20px; border-radius: 8px; width: 380px; max-width: 92vw; box-shadow: 0 10px 25px rgba(0,0,0,0.2); direction: rtl; font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif; }
         .modal-box h3 { margin-top: 0; font-size: 16px; color: #333; }
@@ -33,139 +31,137 @@
     </style>
 </head>
 <body>
- 
     <div class="page-wrapper">
         <div class="line-container verb-header" style="position: absolute; left: 70.80pt; top: 85.07pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">nachschauen – <bdi dir="rtl">يتحقق / يبحث / ينظر</bdi> (habe ____ nachgeschaut)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">nachschauen – <bdi dir="rtl">يتحقق / يبحث / ينظر</bdi> (habe ____ nachgeschaut)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 126.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +nachschauen + in + Dativ (Quelle/Buch)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +nachschauen + in + Dativ (Quelle/Buch)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 140.27pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schaue im Wörterbuch nach.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich schaue im Wörterbuch nach." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich schaue im Wörterbuch nach." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Du schaust im Wörterbuch nach.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Du schaust im Wörterbuch nach." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Du schaust im Wörterbuch nach." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 167.87pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +nachschauen + bei + Dativ (Person/Quelle)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +nachschauen + bei + Dativ (Person/Quelle)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 181.55pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schaue bei meinem Lehrer nach.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich schaue bei meinem Lehrer nach." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich schaue bei meinem Lehrer nach." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er schaut bei seinem Lehrer nach.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Er schaut bei seinem Lehrer nach." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Er schaut bei seinem Lehrer nach." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 209.15pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +nachschauen + nach + Dativ (Information)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +nachschauen + nach + Dativ (Information)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 223.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich schaue nach dem Preis nach.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich schaue nach dem Preis nach." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich schaue nach dem Preis nach." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ihr schaut nach dem Preis nach.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Ihr schaut nach dem Preis nach." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Ihr schaut nach dem Preis nach." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 250.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + nachgeschaut</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + nachgeschaut</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 264.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe im Wörterbuch nachgeschaut.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich habe im Wörterbuch nachgeschaut." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich habe im Wörterbuch nachgeschaut." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe nachgeschaut.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Ich habe nachgeschaut." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Ich habe nachgeschaut." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container verb-header" style="position: absolute; left: 70.80pt; top: 319.55pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">notieren – <bdi dir="rtl">يدون / يكتب</bdi> (habe ____ notiert)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">notieren – <bdi dir="rtl">يدون / يكتب</bdi> (habe ____ notiert)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 347.15pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas notieren + Akkusativ (Information)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas notieren + Akkusativ (Information)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 361.07pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich notiere die Telefonnummer.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich notiere die Telefonnummer." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich notiere die Telefonnummer." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Du notierst die Telefonnummer.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Du notierst die Telefonnummer." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Du notierst die Telefonnummer." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 388.67pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas auf + Dativ notieren (Papier/Notizbuch)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas auf + Dativ notieren (Papier/Notizbuch)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 402.35pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich notiere die Adresse auf dem Papier.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich notiere die Adresse auf dem Papier." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich notiere die Adresse auf dem Papier." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Er notiert die Adresse auf dem Papier.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Er notiert die Adresse auf dem Papier." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Er notiert die Adresse auf dem Papier." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 429.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas in + Dativ notieren (Buch/Notizbuch)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +etwas in + Dativ notieren (Buch/Notizbuch)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 443.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich notiere den Termin in meinem Notizbuch.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich notiere den Termin in meinem Notizbuch." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich notiere den Termin in meinem Notizbuch." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ihr notiert den Termin in eurem Notizbuch.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Ihr notiert den Termin in eurem Notizbuch." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Ihr notiert den Termin in eurem Notizbuch." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 471.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + notiert</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +haben + Akkusativ + notiert</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 485.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe die Telefonnummer notiert.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Ich habe die Telefonnummer notiert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Ich habe die Telefonnummer notiert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe die Telefonnummer notiert.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Ich habe die Telefonnummer notiert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Ich habe die Telefonnummer notiert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container verb-header" style="position: absolute; left: 70.80pt; top: 540.35pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">passieren – <bdi dir="rtl">يحدث / يقع</bdi> (bin ____ passiert)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">passieren – <bdi dir="rtl">يحدث / يقع</bdi> (bin ____ passiert)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 567.95pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +passieren</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +passieren</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 581.87pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Was ist passiert?</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Was ist passiert?" onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Was ist passiert?" onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Was passiert dir?</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Was passiert dir?" onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Was passiert dir?" onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 609.47pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +passieren + Dativ (Person)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +passieren + Dativ (Person)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 623.15pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Mir ist etwas passiert.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Mir ist etwas passiert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Mir ist etwas passiert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ihm ist etwas passiert.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Ihm ist etwas passiert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Ihm ist etwas passiert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 650.75pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +passieren + in + Dativ (Ort)</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +passieren + in + Dativ (Ort)</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 664.43pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Unfall ist auf der Straße passiert.</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Der Unfall ist auf der Straße passiert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Der Unfall ist auf der Straße passiert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Der Unfall ist auf eurer Straße passiert.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Der Unfall ist auf eurer Straße passiert." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Der Unfall ist auf eurer Straße passiert." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 692.03pt; height: 15.60pt; display: flex; align-items: center; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sein + passiert</span>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: normal;">S +sein + passiert</span>
         </div>
         <div class="line-container" style="position: absolute; left: 70.80pt; top: 705.95pt; height: 15.60pt; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
-            <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Was ist gestern passiert?</span>
-            <div class="btn-group">
-                <button class="action-btn speak-btn" data-speak="Was ist gestern passiert?" onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
-                <button class="action-btn translate-btn" data-full="Was ist gestern passiert?" onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
-            </div>
+          <span style="font-size: 12.00pt; font-family: sans-serif; color: #000000; font-weight: bold;">Ich habe gestern etwas erlebt.</span>
+          <div class="btn-group">
+              <button class="action-btn speak-btn" data-speak="Ich habe gestern etwas erlebt." onclick="speakText(this.dataset.speak, this)" title="استماع (ElevenLabs)">🔊</button>
+              <button class="action-btn translate-btn" data-full="Ich habe gestern etwas erlebt." onclick="translateText(this.dataset.full)" title="ترجمة عربية">文A</button>
+          </div>
         </div>
     </div>
- 
     <div id="translateModal" class="modal-overlay" onclick="if(event.target===this) closeModal()">
         <div class="modal-box">
             <h3>الترجمة</h3>
@@ -188,10 +184,8 @@
             </div>
         </div>
     </div>
- 
     <script>
         const CONFIG = {"proxy": "https://german-proxy.abc97-gmx.workers.dev"};
- 
         function generateHashKey(text) {
             let hash = 0;
             for (let i = 0; i < text.length; i++) {
@@ -200,7 +194,6 @@
             }
             return 'audio_' + Math.abs(hash);
         }
- 
         function base64ToBlob(dataUrl) {
             const b64 = dataUrl.split(',').pop();
             const bin = atob(b64);
@@ -208,7 +201,6 @@
             for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
             return new Blob([bytes], { type: 'audio/mpeg' });
         }
- 
         function blobToDataUrl(blob) {
             return new Promise((resolve, reject) => {
                 const r = new FileReader();
@@ -217,31 +209,25 @@
                 r.readAsDataURL(blob);
             });
         }
- 
         let currentAudio = null;
         let currentText = null;
         let currentBtn = null;
- 
         function stopCurrent() {
             if (currentAudio) { currentAudio.pause(); currentAudio.src = ''; }
             if (currentBtn) { currentBtn.classList.remove('playing'); currentBtn.textContent = '🔊'; }
             currentAudio = null; currentText = null; currentBtn = null;
         }
- 
         async function speakText(text, btn) {
             if (!text) return;
             if (currentText === text) { stopCurrent(); return; }
             stopCurrent();
- 
             currentText = text;
             currentBtn = btn || null;
             if (btn) { btn.textContent = '⏳'; }
- 
             try {
                 const cacheKey = generateHashKey(text);
                 let dataUrl = null;
                 try { dataUrl = localStorage.getItem(cacheKey); } catch (e) {}
- 
                 let blob;
                 if (dataUrl) {
                     blob = base64ToBlob(dataUrl);
@@ -255,9 +241,7 @@
                     blob = await res.blob();
                     try { localStorage.setItem(cacheKey, await blobToDataUrl(blob)); } catch (e) {}
                 }
- 
                 if (currentText !== text) return;
- 
                 const url = URL.createObjectURL(blob);
                 const audio = new Audio(url);
                 currentAudio = audio;
@@ -270,7 +254,6 @@
                 stopCurrent();
             }
         }
- 
         async function callProxy(mode, text) {
             const res = await fetch(CONFIG.proxy + '/chat', {
                 method: 'POST',
@@ -281,9 +264,7 @@
             const data = await res.json();
             return data.text;
         }
- 
         let currentGerman = '';
- 
         async function translateText(text) {
             currentGerman = text;
             document.getElementById('originalText').innerText = text;
@@ -295,13 +276,8 @@
             aBtn.disabled = false;
             aBtn.innerText = '🔍 ترجمة تحليلية';
             document.getElementById('translateModal').style.display = 'flex';
- 
             const wordCount = text.trim().split(/\s+/).length;
             const isShort = wordCount <= 3;
-            const prompt = isShort
-                ? 'Translate the German word or short expression into Arabic. Return only the Arabic meaning. No explanation.'
-                : 'Translate this German text into fluent, accurate Arabic tailored for telc B1 exam preparation. Return ONLY the Arabic translation.';
- 
             try {
                 const out = await callProxy(isShort ? 'short' : 'long', text);
                 document.getElementById('arabicText').innerText = out;
@@ -311,12 +287,10 @@
                 document.getElementById('arabicText').innerText = 'فشلت الترجمة. تأكد من الاتصال بالإنترنت ومن المفتاح.';
             }
         }
- 
         async function fetchAnalytical() {
             const aBtn = document.getElementById('analyticalBtn');
             aBtn.disabled = true;
             aBtn.innerText = 'جاري تحليل الجملة...';
-            const prompt = 'You are a professional German-Arabic translator and linguistic analyst. Provide a segmented analytical breakdown mirroring the exact German word-order, formatted inside parentheses with hyphens (e.g., (في جامعة - يُسمح - للطالبة)). Return ONLY the formatted analytical text.';
             try {
                 const out = await callProxy('analytical', currentGerman);
                 document.getElementById('analyticalText').innerText = out;
@@ -328,7 +302,6 @@
                 aBtn.innerText = 'فشل، أعد المحاولة';
             }
         }
- 
         function closeModal() {
             document.getElementById('translateModal').style.display = 'none';
         }
